@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقرير تحليل الموقع الإلكتروني لمتجر تشايم (Caycimsa)</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background-color: #000000; /* Deep Black */
+            color: #f3f4f6; /* Light text for dark theme */
+        }
+        
+        /* Color themes & tokens - Black & Neon Orange */
+        .bg-petroleum { background-color: #0a0a0a; }
+        .text-petroleum { color: #ff6600; }
+        .border-petroleum { border-color: #ff6600; }
+        
+        /* Custom card background using dark surfaces with neon orange borders */
+        .content-card {
+            background-color: #121212; /* Rich dark charcoal */
+            border: 1px solid rgba(255, 102, 0, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+        }
+        .content-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px -10px rgba(255, 102, 0, 0.4);
+            border-color: rgba(255, 102, 0, 0.8);
+        }
+
+        .inner-item {
+            background-color: #1a1a1a;
+            border: 1px solid rgba(255, 102, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        .inner-item:hover {
+            background-color: #241a14;
+            border-color: rgba(255, 102, 0, 0.5);
+            transform: scale(1.01);
+        }
+
+        /* Animations & Motion */
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0px) scale(1) rotate(0deg); }
+            50% { transform: translateY(-8px) scale(1.03) rotate(1deg); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 25px rgba(255, 102, 0, 0.8); transform: scale(1); }
+            50% { box-shadow: 0 0 45px rgba(255, 136, 0, 1); transform: scale(1.08); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-float {
+            animation: floatLogo 3s ease-in-out infinite;
+        }
+        .animate-glow {
+            animation: pulseGlow 2.5s ease-in-out infinite;
+        }
+        .motion-fade-in {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .badge-yellow { background-color: #ff6600; color: #000000; font-weight: 900; }
+    </style>
+</head>
+<body class="antialiased pb-20 overflow-x-hidden">
+
+    <!-- Header / Top Logo -->
+    <header class="bg-petroleum text-white shadow-2xl py-12 px-6 mb-12 relative overflow-hidden border-b-2 border-orange-500 motion-fade-in">
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-orange-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center gap-6 relative z-10">
+            
+            <!-- Company Logo at Top Center -->
+            <a href="https://dg-craft.com/index.html" target="_blank" class="block animate-float focus:outline-none">
+                <div class="w-24 h-24 md:w-32 md:h-32 rounded-3xl overflow-hidden shadow-2xl border-4 border-orange-500 bg-black p-1 transition-transform hover:scale-110">
+                    <img src="https://i.ibb.co/M5k30hGM/b3d88775-4dd0-4ccf-ae34-ae20c23ff8da.jpg" alt="Digital Craft Logo" class="w-full h-full object-cover rounded-2xl" onerror="this.src='https://placehold.co/150x150/000000/ff6600?text=DC'" />
+                </div>
+            </a>
+
+            <div class="motion-fade-in max-w-4xl" style="animation-delay: 0.2s;">
+                <span class="badge-yellow text-xs px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3 shadow-lg">Digital Craft</span>
+                <h1 class="text-3xl md:text-5xl font-black tracking-tight text-white mb-4 drop-shadow-md">تقرير تحليل الموقع الإلكتروني لمتجر تشايم (Caycimsa)</h1>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm md:text-base text-slate-300 mt-4 text-right bg-black/50 p-5 rounded-2xl border border-orange-500/30">
+                    <div>
+                        <strong class="text-orange-400">الموقع الإلكتروني:</strong> 
+                        <a href="https://caycimsa.com/" target="_blank" class="underline hover:text-orange-300 break-all" dir="ltr">https://caycimsa.com/</a>
+                    </div>
+                    <div>
+                        <strong class="text-orange-400">المنصة المستخدمة:</strong> سلة (Salla).
+                    </div>
+                    <div class="md:col-span-3 pt-2 border-t border-orange-500/20">
+                        <strong class="text-orange-400">طبيعة النشاط:</strong> متجر إلكتروني متخصص في بيع ماكينات تحضير الشاي والقهوة، والسماورات، والأباريق النحاسية والإكسسوارات المرتبطة بها.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 space-y-12">
+
+        <!-- Section 1 -->
+        <section class="content-card p-8 rounded-3xl shadow-xl motion-fade-in">
+            <h2 class="text-2xl font-black text-orange-500 mb-4 pb-2 border-b-2 border-orange-500/50 inline-block">أولاً: تحليل النشاط التجاري والهوية الرقمية</h2>
+            <p class="text-slate-300 leading-relaxed text-base md:text-lg mb-4">
+                يستهدف متجر تشايم شريحة من العملاء الأفراد والأنشطة التجارية، مع تركيز واضح على قطاع الأعمال (B2B)، وبالأخص:
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-slate-300 text-sm md:text-base mb-6 mr-2">
+                <li>أصحاب المقاهي والكافيهات.</li>
+                <li>المطاعم والفنادق.</li>
+                <li>محلات تقديم الشاي والقهوة.</li>
+                <li>المشاريع المتخصصة في الضيافة.</li>
+                <li>الأفراد المهتمون بأدوات إعداد الشاي والقهوة التقليدية.</li>
+            </ul>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="inner-item p-6 rounded-2xl border-2 border-orange-500/30">
+                    <h3 class="text-xl font-black text-orange-400 mb-3">نقاط القوة:</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-slate-300 text-sm">
+                        <li>امتلاك منتجات متخصصة تستهدف احتياجاً واضحاً في السوق.</li>
+                        <li>وجود منتجات ذات قيمة شرائية مرتفعة، ما يتيح فرصاً لتحقيق عائد جيد من الحملات التسويقية.</li>
+                        <li>تقديم منتجات تجمع بين الاستخدام العملي والتصميم التراثي.</li>
+                        <li>توفير إمكانية تخصيص بعض المنتجات بطباعة شعار النشاط التجاري، وهي ميزة تنافسية مهمة لجذب أصحاب المشاريع.</li>
+                    </ol>
+                </div>
+
+                <div class="inner-item p-6 rounded-2xl border-2 border-orange-500/30">
+                    <h3 class="text-xl font-black text-orange-400 mb-3">نقاط تحتاج إلى تطوير:</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-slate-300 text-sm">
+                        <li>توضيح الهوية التجارية بصورة أكبر، وإبراز ما يميز تشايم عن المتاجر المنافسة.</li>
+                        <li>تطوير الرسالة التسويقية لتخاطب أصحاب المشاريع التجارية بشكل مباشر.</li>
+                        <li>إبراز خبرة التصنيع وجودة الخامات والقدرات الإنتاجية بصورة أكثر وضوحاً.</li>
+                        <li>بناء هوية تسويقية موحدة تربط بين المنتجات وتجربة العلامة التجارية.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="content-card p-8 rounded-3xl shadow-xl motion-fade-in">
+            <h2 class="text-2xl font-black text-orange-500 mb-4 pb-2 border-b-2 border-orange-500/50 inline-block">ثانياً: تحليل الصفحة الرئيسية وتجربة المستخدم (UX/UI)</h2>
+            <p class="text-slate-300 leading-relaxed text-base md:text-lg mb-6">
+                تُعد الصفحة الرئيسية نقطة الاتصال الأولى بين العميل والعلامة التجارية، ولذلك يجب أن تؤدي دوراً واضحاً في تعريف الزائر بالنشاط وتوجيهه نحو المنتجات المناسبة.
+            </p>
+            
+            <h3 class="text-xl font-black text-orange-400 mb-4">الملاحظات:</h3>
+            <div class="space-y-4">
+                <div class="inner-item p-5 rounded-2xl">
+                    <h4 class="font-bold text-orange-300 mb-1">1. الرسالة التسويقية:</h4>
+                    <p class="text-slate-300 text-sm">تحتاج الرسالة الرئيسية إلى أن تكون أكثر تحديداً، بحيث توضح طبيعة المنتجات والفئات المستهدفة والقيمة التي يحصل عليها العميل.</p>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl">
+                    <h4 class="font-bold text-orange-300 mb-1">2. إبراز المنتجات:</h4>
+                    <p class="text-slate-300 text-sm">ينبغي عرض المنتجات الأكثر طلباً والمميزة في المتجر بصورة واضحة، مع تصنيفها حسب الاستخدام والطاقة الاستيعابية.</p>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl">
+                    <h4 class="font-bold text-orange-300 mb-2">3. التصنيفات:</h4>
+                    <p class="text-slate-300 text-sm mb-2">يفضل تنظيم المنتجات ضمن أقسام واضحة، مثل:</p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-4">
+                        <li>ماكينات الشاي.</li>
+                        <li>ماكينات الشاي بالبخار.</li>
+                        <li>السماورات.</li>
+                        <li>الأباريق النحاسية.</li>
+                        <li>أجهزة تحضير القهوة.</li>
+                        <li>الإكسسوارات وقطع الغيار.</li>
+                    </ul>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl">
+                    <h4 class="font-bold text-orange-300 mb-2">4. عناصر الثقة:</h4>
+                    <p class="text-slate-300 text-sm mb-2">يحتاج الموقع إلى إبراز عناصر الثقة بصورة أكبر، ومنها:</p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-4">
+                        <li>ضمان المنتجات.</li>
+                        <li>خدمات ما بعد البيع.</li>
+                        <li>الصيانة والدعم الفني.</li>
+                        <li>سياسة الاستبدال والاسترجاع.</li>
+                        <li>آراء وتجارب العملاء.</li>
+                        <li>معلومات الشحن والتوصيل.</li>
+                    </ul>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl">
+                    <h4 class="font-bold text-orange-300 mb-1">5. دعوات اتخاذ الإجراء (CTA):</h4>
+                    <p class="text-slate-300 text-sm">يجب توحيد وتطوير العبارات التحفيزية للشراء والاستفسار، مثل: اطلب الآن، اكتشف المنتجات، اطلب عرض سعر للمشاريع التجارية.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="content-card p-8 rounded-3xl shadow-xl motion-fade-in">
+            <h2 class="text-2xl font-black text-orange-500 mb-4 pb-2 border-b-2 border-orange-500/50 inline-block">ثالثاً: تحليل صفحات المنتجات</h2>
+            <p class="text-slate-300 leading-relaxed text-base md:text-lg mb-6">
+                تُعد صفحات المنتجات من أهم نقاط القوة التي يمكن البناء عليها في المتجر، نظراً لطبيعة المنتجات التي تحتاج إلى شرح فني قبل اتخاذ قرار الشراء.
+            </p>
+
+            <div class="inner-item p-6 rounded-2xl border-2 border-orange-500/30 mb-6">
+                <h3 class="text-xl font-black text-orange-400 mb-3">نقاط القوة:</h3>
+                <ol class="list-decimal list-inside space-y-2 text-slate-300 text-sm">
+                    <li>تقديم وصف تفصيلي للعديد من المنتجات.</li>
+                    <li>توضيح المواصفات الفنية والأبعاد والسعات.</li>
+                    <li>إبراز نوع الخامات المستخدمة، مثل النحاس والفولاذ المقاوم للصدأ 304.</li>
+                    <li>توضيح المميزات التشغيلية وأنظمة التحكم في الحرارة وتنقية المياه.</li>
+                    <li>وجود خيارات لتخصيص بعض المنتجات وإضافة شعار النشاط التجاري.</li>
+                    <li>عرض عدد مرات شراء بعض المنتجات، وهو عنصر يمكن الاستفادة منه في تعزيز الثقة.</li>
+                </ol>
+            </div>
+
+            <h3 class="text-xl font-black text-orange-400 mb-4">نقاط الضعف وفرص التطوير:</h3>
+            <div class="space-y-4">
+                <div class="inner-item p-5 rounded-2xl">
+                    <h4 class="font-bold text-orange-300 mb-2">1. تحسين المحتوى التسويقي:</h4>
+                    <p class="text-slate-300 text-sm mb-2">رغم وجود وصف تفصيلي للمنتجات، إلا أن المحتوى يحتاج إلى تطوير من مجرد سرد المواصفات إلى توضيح القيمة التجارية للمنتج.</p>
+                    <p class="text-slate-300 text-sm">على سبيل المثال، بدلاً من الاكتفاء بذكر سعة ماكينة الشاي، يمكن توضيح عدد الأكواب أو حجم التشغيل المتوقع ومدى ملاءمة الماكينة للمقاهي ذات الكثافة العالية.</p>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl">
+                    <h4 class="font-bold text-orange-300 mb-2">2. الصور والفيديوهات:</h4>
+                    <p class="text-slate-300 text-sm mb-2">يوصى بإضافة:</p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-4">
+                        <li>صور احترافية للمنتجات من جميع الزوايا.</li>
+                        <li>فيديوهات توضح طريقة التشغيل.</li>
+                        <li>فيديوهات مقارنة بين الموديلات.</li>
+                        <li>محتوى يوضح جودة التصنيع والخامات.</li>
+                        <li>صور للمنتجات أثناء الاستخدام داخل المقاهي والمطاعم.</li>
+                    </ul>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl">
+                    <h4 class="font-bold text-orange-300 mb-2">3. تقييمات العملاء:</h4>
+                    <p class="text-slate-300 text-sm mb-2">تظهر بعض صفحات المنتجات عدم وجود تقييمات، رغم وجود عمليات شراء مسجلة.</p>
+                    <p class="text-slate-300 text-sm">يجب تفعيل استراتيجية لجمع تقييمات العملاء بعد الشراء، مع تشجيعهم على مشاركة الصور وتجارب الاستخدام.</p>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl">
+                    <h4 class="font-bold text-orange-300 mb-1">4. المنتجات المرتبطة:</h4>
+                    <p class="text-slate-300 text-sm">إضافة منتجات مقترحة وملحقات مناسبة أسفل كل منتج لزيادة متوسط قيمة الطلب.</p>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl">
+                    <h4 class="font-bold text-orange-300 mb-1">5. توحيد بيانات المنتجات:</h4>
+                    <p class="text-slate-300 text-sm">يجب مراجعة الأسعار والعملات وطريقة عرضها، والتأكد من اتساق البيانات بين جميع صفحات المنتجات بما يتناسب مع السوق المستهدف.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="content-card p-8 rounded-3xl shadow-xl motion-fade-in">
+            <h2 class="text-2xl font-black text-orange-500 mb-4 pb-2 border-b-2 border-orange-500/50 inline-block">رابعاً: تحليل محركات البحث (SEO)</h2>
+            <p class="text-slate-300 leading-relaxed text-base md:text-lg mb-6">
+                يُعد تحسين محركات البحث من أهم الفرص المتاحة لزيادة الزيارات المجانية واستقطاب عملاء لديهم نية شراء فعلية.
+            </p>
+
+            <div class="space-y-6">
+                <!-- 1 -->
+                <div class="inner-item p-6 rounded-2xl border-2 border-orange-500/30">
+                    <h3 class="text-xl font-black text-orange-400 mb-3">1. الكلمات المفتاحية المستهدفة</h3>
+                    <p class="text-slate-300 text-sm mb-4">يحتاج الموقع إلى استراتيجية كلمات مفتاحية مبنية على طبيعة المنتجات واحتياجات الجمهور المستهدف.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-black/40 p-4 rounded-xl border border-orange-500/20">
+                            <h4 class="font-bold text-orange-300 mb-2 text-sm">الكلمات المفتاحية الرئيسية:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-2">
+                                <li>ماكينة شاي.</li>
+                                <li>ماكينة شاي للمقاهي.</li>
+                                <li>ماكينة شاي تركية.</li>
+                                <li>ماكينة شاي بخار.</li>
+                                <li>سماور كهربائي.</li>
+                                <li>ماكينة تحضير الشاي.</li>
+                                <li>ماكينة شاي للمطاعم.</li>
+                                <li>معدات الكافيهات.</li>
+                                <li>أباريق شاي نحاسية.</li>
+                                <li>أجهزة تحضير القهوة التركية.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-black/40 p-4 rounded-xl border border-orange-500/20">
+                            <h4 class="font-bold text-orange-300 mb-2 text-sm">الكلمات المفتاحية التجارية:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-2">
+                                <li>شراء ماكينة شاي للمقاهي.</li>
+                                <li>أفضل ماكينة شاي للمطاعم.</li>
+                                <li>أسعار ماكينات الشاي التجارية.</li>
+                                <li>ماكينة شاي تركية للمشاريع.</li>
+                                <li>معدات تجهيز الكافيهات والمطاعم.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="inner-item p-6 rounded-2xl border-2 border-orange-500/30">
+                    <h3 class="text-xl font-black text-orange-400 mb-3">2. تحسين العناوين والوصف (Meta Tags)</h3>
+                    <p class="text-slate-300 text-sm mb-2">يجب مراجعة العناوين والأوصاف التعريفية للصفحات الرئيسية وصفحات التصنيفات والمنتجات.</p>
+                    <p class="text-slate-300 text-sm">ويُوصى بأن يحتوي كل عنوان على الكلمة المفتاحية الأساسية، مع كتابة وصف تسويقي يوضح مميزات المنتج ويشجع المستخدم على زيارة الصفحة.</p>
+                </div>
+
+                <!-- 3 -->
+                <div class="inner-item p-6 rounded-2xl border-2 border-orange-500/30">
+                    <h3 class="text-xl font-black text-orange-400 mb-3">3. تحسين المحتوى الداخلي</h3>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-300 text-sm mr-2">
+                        <li>تطوير وصف المنتجات باستخدام الكلمات المفتاحية بصورة طبيعية.</li>
+                        <li>إنشاء محتوى إرشادي متخصص حول اختيار ماكينات الشاي.</li>
+                        <li>كتابة مقارنات بين الماكينات حسب السعة والاستخدام.</li>
+                        <li>إنشاء صفحات مخصصة لتلبية احتياجات المقاهي والمطاعم والفنادق.</li>
+                        <li>تحسين الروابط الداخلية بين المقالات والتصنيفات والمنتجات.</li>
+                    </ul>
+                </div>
+
+                <!-- 4 -->
+                <div class="inner-item p-6 rounded-2xl border-2 border-orange-500/30">
+                    <h3 class="text-xl font-black text-orange-400 mb-3">4. التهيئة التقنية لمحركات البحث</h3>
+                    <p class="text-slate-300 text-sm mb-2">تتطلب مراجعة الموقع تقنياً فحص العناصر التالية:</p>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-300 text-sm mr-2">
+                        <li>فهرسة صفحات الموقع في Google.</li>
+                        <li>ملف Sitemap.xml.</li>
+                        <li>ملف Robots.txt.</li>
+                        <li>الروابط الداخلية والخارجية.</li>
+                        <li>الروابط المكررة وإشارات Canonical.</li>
+                        <li>البيانات المنظمة Schema Markup.</li>
+                        <li>توافق الموقع مع الأجهزة المحمولة.</li>
+                        <li>أخطاء الزحف والفهرسة.</li>
+                        <li>تحسين الصور وأحجامها وخصائص ALT.</li>
+                    </ul>
+                </div>
+
+                <!-- 5 -->
+                <div class="inner-item p-6 rounded-2xl border-2 border-orange-500/30">
+                    <h3 class="text-xl font-black text-orange-400 mb-3">5. تحسين الظهور في نتائج البحث المدعومة بالذكاء الاصطناعي (GEO)</h3>
+                    <p class="text-slate-300 text-sm mb-2">يوصى بتطوير المحتوى ليكون أكثر قابلية للفهم والاستشهاد به في محركات البحث التوليدية، وذلك من خلال:</p>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-300 text-sm mr-2">
+                        <li>إنشاء صفحات تجيب عن الأسئلة الشائعة.</li>
+                        <li>تقديم مواصفات المنتجات بصورة منظمة.</li>
+                        <li>إعداد مقارنات تفصيلية بين المنتجات.</li>
+                        <li>كتابة محتوى متخصص يوضح الخبرة في تصنيع وتجهيز معدات الشاي.</li>
+                        <li>توحيد معلومات العلامة التجارية والمنتجات عبر المنصات الرقمية.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="content-card p-8 rounded-3xl shadow-xl motion-fade-in">
+            <h2 class="text-2xl font-black text-orange-500 mb-4 pb-2 border-b-2 border-orange-500/50 inline-block">خامساً: تحليل المحتوى والتسويق عبر منصات التواصل الاجتماعي</h2>
+            <p class="text-slate-300 leading-relaxed text-base md:text-lg mb-6">
+                يمتلك النشاط فرصة جيدة لبناء محتوى متخصص؛ لأن المنتجات قابلة للتصوير والشرح والتجربة العملية.
+            </p>
+
+            <h3 class="text-xl font-black text-orange-400 mb-4">محاور المحتوى المقترحة:</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div class="inner-item p-5 rounded-2xl">
+                    <h4 class="font-bold text-orange-300 mb-2">1. المحتوى التعريفي بالمنتجات:</h4>
+                    <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-2">
+                        <li>استعراض المنتجات ومميزاتها.</li>
+                        <li>شرح الفروق بين الموديلات.</li>
+                        <li>توضيح المواصفات الفنية.</li>
+                        <li>إبراز جودة الخامات والتصنيع.</li>
+                    </ul>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl">
+                    <h4 class="font-bold text-orange-300 mb-2">2. المحتوى التثقيفي:</h4>
+                    <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-2">
+                        <li>كيف تختار ماكينة الشاي المناسبة لمشروعك؟</li>
+                        <li>الفرق بين ماكينات الشاي الكهربائية وماكينات البخار.</li>
+                        <li>كيفية تحديد السعة المناسبة للمقهى.</li>
+                        <li>نصائح الحفاظ على الماكينات وإطالة عمرها التشغيلي.</li>
+                    </ul>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl">
+                    <h4 class="font-bold text-orange-300 mb-2">3. المحتوى البيعي:</h4>
+                    <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-2">
+                        <li>عروض المنتجات.</li>
+                        <li>باقات تجهيز المقاهي.</li>
+                        <li>عروض شراء أكثر من ماكينة.</li>
+                        <li>خدمات تخصيص المنتجات بالشعارات.</li>
+                        <li>إبراز المنتجات الأكثر طلباً.</li>
+                    </ul>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl">
+                    <h4 class="font-bold text-orange-300 mb-2">4. المحتوى التسويقي وبناء الثقة:</h4>
+                    <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-2">
+                        <li>تجارب العملاء.</li>
+                        <li>آراء أصحاب المقاهي.</li>
+                        <li>تصوير المنتجات أثناء التشغيل.</li>
+                        <li>عرض مراحل التصنيع والتجهيز.</li>
+                        <li>إبراز خدمات ما بعد البيع.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="inner-item p-5 rounded-2xl border-r-4 border-orange-500">
+                <h4 class="font-bold text-orange-400 mb-1">التوصية:</h4>
+                <p class="text-slate-300 text-sm">
+                    التركيز على المحتوى المرئي، خصوصاً مقاطع الفيديو القصيرة (Reels)، لأنها تتيح عرض كفاءة المنتجات ومميزاتها العملية بصورة مباشرة، وتساعد على جذب أصحاب الأنشطة التجارية.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="content-card p-8 rounded-3xl shadow-xl motion-fade-in">
+            <h2 class="text-2xl font-black text-orange-500 mb-4 pb-2 border-b-2 border-orange-500/50 inline-block">سادساً: تحليل الحملات الإعلانية المدفوعة</h2>
+            <p class="text-slate-300 leading-relaxed text-base md:text-lg mb-6">
+                توجد فرصة للاستفادة من الحملات الإعلانية في الوصول إلى العملاء الذين يبحثون بالفعل عن معدات تجهيز المقاهي والمطاعم.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="inner-item p-5 rounded-2xl">
+                    <h3 class="font-bold text-orange-400 mb-2">1. حملات Google Ads</h3>
+                    <p class="text-slate-300 text-sm mb-2">التركيز على الكلمات المفتاحية ذات النية الشرائية المرتفعة، مثل:</p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-2 mb-3">
+                        <li>شراء ماكينة شاي.</li>
+                        <li>ماكينة شاي للمطاعم.</li>
+                        <li>ماكينة شاي تركية.</li>
+                        <li>معدات الكافيهات.</li>
+                        <li>سماور شاي تجاري.</li>
+                    </ul>
+                    <p class="text-slate-300 text-sm">ويتم توجيه كل مجموعة إعلانية إلى صفحة المنتج أو التصنيف الأكثر ارتباطاً بعملية البحث.</p>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl">
+                    <h3 class="font-bold text-orange-400 mb-2">2. حملات Meta Ads</h3>
+                    <p class="text-slate-300 text-sm mb-2">استخدام منصات فيسبوك وإنستجرام للوصول إلى:</p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-2 mb-3">
+                        <li>أصحاب المقاهي.</li>
+                        <li>أصحاب المطاعم.</li>
+                        <li>المستثمرين في قطاع الضيافة.</li>
+                        <li>المهتمين بتأسيس مشاريع المشروبات.</li>
+                    </ul>
+                    <p class="text-slate-300 text-sm">مع استخدام فيديوهات المنتجات والعروض التجارية والمحتوى التوضيحي.</p>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl">
+                    <h3 class="font-bold text-orange-400 mb-2">3. حملات إعادة الاستهداف (Remarketing)</h3>
+                    <p class="text-slate-300 text-sm mb-2">استهداف الزوار الذين:</p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-2 mb-3">
+                        <li>شاهدوا المنتجات ولم يشتروا.</li>
+                        <li>أضافوا منتجات إلى سلة التسوق.</li>
+                        <li>تفاعلوا مع الحسابات الاجتماعية.</li>
+                        <li>زاروا صفحات المنتجات مرتفعة السعر.</li>
+                    </ul>
+                    <p class="text-slate-300 text-sm">وذلك من خلال إعلانات تركز على مميزات المنتج وخدمات التخصيص والضمان والشحن.</p>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl">
+                    <h3 class="font-bold text-orange-400 mb-2">4. حملات استهداف قطاع الأعمال (B2B)</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        يوصى بإطلاق حملات مخصصة لأصحاب المشاريع التجارية، مع توفير وسيلة مباشرة لطلب عروض أسعار للكميات والمشاريع الجديدة، بدلاً من الاعتماد على الشراء الفردي فقط.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="content-card p-8 rounded-3xl shadow-xl motion-fade-in">
+            <h2 class="text-2xl font-black text-orange-500 mb-4 pb-2 border-b-2 border-orange-500/50 inline-block">سابعاً: تحليل فرص زيادة المبيعات ومعدل التحويل (CRO)</h2>
+            <p class="text-slate-300 leading-relaxed text-base md:text-lg mb-4">
+                تتمثل إحدى أهم الفرص التسويقية في تحويل الموقع من مجرد كتالوج لعرض المنتجات إلى قناة بيع متكاملة تستهدف الأفراد والأنشطة التجارية.
+            </p>
+            <h3 class="text-xl font-black text-orange-400 mb-3">التوصيات:</h3>
+            <ol class="list-decimal list-inside space-y-2.5 text-slate-300 text-sm md:text-base">
+                <li class="inner-item p-3.5 rounded-xl">إضافة وسيلة واضحة لطلب عروض الأسعار التجارية.</li>
+                <li class="inner-item p-3.5 rounded-xl">توفير باقات تجهيز للمقاهي والمطاعم حسب حجم النشاط.</li>
+                <li class="inner-item p-3.5 rounded-xl">عرض المنتجات الأكثر مبيعاً في الصفحة الرئيسية.</li>
+                <li class="inner-item p-3.5 rounded-xl">تحسين تجربة إضافة المنتجات إلى السلة وإتمام الطلب.</li>
+                <li class="inner-item p-3.5 rounded-xl">توفير خيارات تواصل سريعة مع فريق المبيعات.</li>
+                <li class="inner-item p-3.5 rounded-xl">إبراز خدمات التخصيص وطباعة الشعارات.</li>
+                <li class="inner-item p-3.5 rounded-xl">جمع بيانات العملاء المهتمين بالمنتجات مرتفعة السعر.</li>
+                <li class="inner-item p-3.5 rounded-xl">تفعيل رسائل استعادة السلات المتروكة.</li>
+                <li class="inner-item p-3.5 rounded-xl">تطوير نظام متابعة للعملاء الذين يطلبون عروض أسعار ولا يستكملون الشراء.</li>
+            </ol>
+        </section>
+
+        <!-- Section 8 -->
+        <section class="content-card p-8 rounded-3xl shadow-xl motion-fade-in">
+            <h2 class="text-2xl font-black text-orange-500 mb-6 pb-2 border-b-2 border-orange-500/50 inline-block">ثامناً: التقييم العام للموقع</h2>
+            
+            <div class="overflow-x-auto rounded-2xl border border-orange-500/30 mb-4">
+                <table class="w-full text-right border-collapse">
+                    <thead>
+                        <tr class="bg-orange-600/20 border-b border-orange-500/40 text-orange-400 font-black text-sm md:text-base">
+                            <th class="p-4">محور التقييم</th>
+                            <th class="p-4">الملاحظة</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-orange-500/20 text-slate-300 text-sm md:text-base">
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 font-bold text-orange-300">طبيعة النشاط والمنتجات</td>
+                            <td class="p-4">تخصص واضح وفرصة تجارية جيدة</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 font-bold text-orange-300">الهوية التجارية</td>
+                            <td class="p-4">تحتاج إلى مزيد من التميز والإبراز</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 font-bold text-orange-300">الصفحة الرئيسية</td>
+                            <td class="p-4">تحتاج إلى تطوير الرسالة التسويقية</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 font-bold text-orange-300">صفحات المنتجات</td>
+                            <td class="p-4">محتوى فني جيد قابل للتطوير</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 font-bold text-orange-300">تجربة المستخدم</td>
+                            <td class="p-4">تحتاج إلى تحسين مسار الشراء</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 font-bold text-orange-300">تحسين محركات البحث</td>
+                            <td class="p-4">تحتاج إلى استراتيجية SEO متكاملة</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 font-bold text-orange-300">المحتوى التسويقي</td>
+                            <td class="p-4">توجد فرص كبيرة للتطوير</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 font-bold text-orange-300">الحملات الإعلانية</td>
+                            <td class="p-4">فرصة جيدة لاستقطاب العملاء المستهدفين</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 font-bold text-orange-300">التحويل والمبيعات</td>
+                            <td class="p-4">تحتاج إلى تطوير آليات تحويل الزوار إلى عملاء</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <p class="text-slate-400 text-xs md:text-sm italic">
+                *ملاحظة: هذا تقييم نوعي مبدئي بناءً على مراجعة المحتوى والصفحات المتاحة، وليس تقييماً رقمياً للأداء أو نتائج أدوات القياس.*
+            </p>
+        </section>
+
+        <!-- Section 9 -->
+        <section class="content-card p-8 rounded-3xl shadow-xl motion-fade-in">
+            <h2 class="text-2xl font-black text-orange-500 mb-4 pb-2 border-b-2 border-orange-500/50 inline-block">تاسعاً: الخطة الاستراتيجية المقترحة للتطوير</h2>
+            <p class="text-slate-300 mb-6">نوصي بالعمل على أربعة محاور رئيسية متكاملة:</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="inner-item p-5 rounded-2xl border-r-4 border-orange-500">
+                    <h3 class="font-bold text-orange-400 mb-2">المحور الأول: تطوير الموقع الإلكتروني</h3>
+                    <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-2">
+                        <li>تحسين تجربة المستخدم والواجهة.</li>
+                        <li>تطوير الصفحة الرئيسية والتصنيفات.</li>
+                        <li>تحسين صفحات المنتجات.</li>
+                        <li>تحسين مسار الشراء ووسائل التواصل.</li>
+                        <li>تطوير صفحات استهداف قطاع الأعمال.</li>
+                    </ul>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl border-r-4 border-orange-500">
+                    <h3 class="font-bold text-orange-400 mb-2">المحور الثاني: تحسين محركات البحث SEO وGEO</h3>
+                    <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-2">
+                        <li>التهيئة التقنية للموقع.</li>
+                        <li>تحسين سرعة التحميل والأداء.</li>
+                        <li>دراسة الكلمات المفتاحية.</li>
+                        <li>تحسين المحتوى والعناوين والوصف.</li>
+                        <li>تطوير المحتوى المتخصص.</li>
+                        <li>تحسين الفهرسة والبيانات المنظمة.</li>
+                        <li>تعزيز الظهور في نتائج البحث التقليدية والتوليدية.</li>
+                    </ul>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl border-r-4 border-orange-500">
+                    <h3 class="font-bold text-orange-400 mb-2">المحور الثالث: إدارة حسابات التواصل الاجتماعي</h3>
+                    <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-2">
+                        <li>إعداد استراتيجية المحتوى.</li>
+                        <li>تصميم المنشورات التسويقية.</li>
+                        <li>إنتاج مقاطع الفيديو القصيرة.</li>
+                        <li>إدارة النشر والتفاعل.</li>
+                        <li>إبراز المنتجات والمميزات التنافسية.</li>
+                        <li>بناء صورة ذهنية احترافية للعلامة التجارية.</li>
+                    </ul>
+                </div>
+
+                <div class="inner-item p-5 rounded-2xl border-r-4 border-orange-500">
+                    <h3 class="font-bold text-orange-400 mb-2">المحور الرابع: إدارة الحملات الإعلانية</h3>
+                    <ul class="list-disc list-inside space-y-1 text-slate-300 text-sm mr-2">
+                        <li>إعداد استراتيجية الحملات.</li>
+                        <li>إدارة حملات Google Ads.</li>
+                        <li>إدارة حملات Meta Ads.</li>
+                        <li>استهداف العملاء المحتملين في قطاع الأعمال.</li>
+                        <li>إعادة استهداف زوار الموقع.</li>
+                        <li>تحليل النتائج وتحسين الأداء بصورة مستمرة.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10 -->
+        <section class="content-card p-8 rounded-3xl shadow-xl motion-fade-in border-2 border-orange-500 bg-[#141414]">
+            <h2 class="text-2xl font-black text-orange-500 mb-4 pb-2 border-b-2 border-orange-500/50 inline-block">عاشراً: الخلاصة والتوصية النهائية</h2>
+            
+            <p class="text-slate-300 leading-relaxed text-base md:text-lg mb-4">
+                يمتلك متجر تشايم فرصة جيدة للنمو الرقمي، نظراً لتخصص المنتجات ووجود شريحة مستهدفة واضحة، بالإضافة إلى إمكانية استهداف قطاع الأعمال بمنتجات ذات قيمة شرائية مرتفعة.
+            </p>
+            <p class="text-slate-300 leading-relaxed text-base md:text-lg mb-6">
+                وتتمثل الفرصة الأكبر في الانتقال من الاعتماد على عرض المنتجات فقط إلى بناء منظومة تسويقية متكاملة تربط بين الموقع الإلكتروني ومحركات البحث ومنصات التواصل الاجتماعي والحملات الإعلانية.
+            </p>
+
+            <div class="inner-item p-6 rounded-2xl bg-black/60 border border-orange-500/40 mb-6">
+                <h3 class="text-orange-400 font-black text-lg mb-2">التوصية الأساسية:</h3>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                    عدم الاعتماد على الحملات الإعلانية وحدها لزيادة المبيعات، بل العمل بالتوازي على تحسين الموقع وتجربة المستخدم وتحسين محركات البحث وبناء محتوى متخصص، بما يضمن تأسيس قنوات مستدامة لاستقطاب العملاء وتحسين معدلات التحويل.
+                </p>
+            </div>
+
+            <p class="text-orange-300 font-bold text-base md:text-lg leading-relaxed text-center">
+                والهدف النهائي هو تعزيز حضور علامة تشايم في السوق، وزيادة الوصول إلى أصحاب المقاهي والمطاعم والمشاريع التجارية، وتحويل الزيارات الرقمية إلى فرص بيع ومبيعات فعلية.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Floating Bottom-Right Glowing Logo -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://dg-craft.com/index.html" target="_blank" class="block animate-glow rounded-3xl overflow-hidden w-16 h-16 md:w-20 md:h-20 bg-black border-2 border-orange-500 shadow-[0_0_25px_rgba(255,102,0,0.8)] p-1 transition-transform hover:scale-110" title="زيارة موقع Digital Craft">
+            <img src="https://i.ibb.co/M5k30hGM/b3d88775-4dd0-4ccf-ae34-ae20c23ff8da.jpg" alt="Digital Craft Logo" class="w-full h-full object-cover rounded-2xl" onerror="this.src='https://placehold.co/100x100/000000/ff6600?text=DC'" />
+        </a>
+    </div>
+
+</body>
+</html>
